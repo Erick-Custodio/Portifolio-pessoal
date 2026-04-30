@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Mail, Linkedin, Github, Send, CheckCircle2, Loader2, AlertCircle } from 'lucide-react'
+import { Mail, Linkedin, Github, Send, CheckCircle2, Loader2, AlertCircle, MessageCircle } from 'lucide-react'
+
+const WHATSAPP_URL = 'https://wa.me/5519997454303'
 
 const socials = [
   {
@@ -24,6 +26,13 @@ const socials = [
     handle: 'erick.custodio@outlook.com',
     href: 'mailto:erick.custodio@outlook.com',
     desc: 'Envie uma mensagem',
+  },
+  {
+    icon: MessageCircle,
+    label: 'WhatsApp',
+    handle: '(19) 99745-4303',
+    href: WHATSAPP_URL,
+    desc: 'Chame no WhatsApp',
   },
 ]
 
