@@ -1,4 +1,4 @@
-const repo = 'portifolio-pessoal';
+const repo = 'Portifolio-pessoal';
 const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
 
 /** @type {import('next').NextConfig} */
