@@ -54,14 +54,7 @@ export default function Navbar() {
       style={{ background: scrolled ? 'var(--nav-bg)' : 'transparent' }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a
-          href="#hero"
-          onClick={(e) => { e.preventDefault(); handleNav('#hero') }}
-          className="font-mono text-primary font-semibold tracking-tight text-lg select-none"
-        >
-          ec<span className="text-foreground/40">.</span>dev
-        </a>
+        <div aria-hidden="true" />
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1">

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Mail, Linkedin, Github, Send, CheckCircle2, Loader2 } from 'lucide-react'
+import { Mail, Linkedin, Github, Send, CheckCircle2, Loader2, AlertCircle } from 'lucide-react'
 
 const socials = [
   {
@@ -27,6 +27,8 @@ const socials = [
   },
 ]
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvyewvo'
+
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
 export default function Contact() {
@@ -51,11 +53,28 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
-    // Simulates sending — replace with real API call
-    await new Promise((res) => setTimeout(res, 1500))
-    setStatus('success')
-    setForm({ name: '', email: '', subject: '', message: '' })
-    setTimeout(() => setStatus('idle'), 4000)
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (!response.ok) {
+        throw new Error('Formspree request failed')
+      }
+
+      setStatus('success')
+      setForm({ name: '', email: '', subject: '', message: '' })
+    } catch {
+      setStatus('error')
+    } finally {
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   return (
@@ -193,9 +212,9 @@ export default function Contact() {
                 disabled={status === 'sending' || status === 'success'}
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
                 style={{
-                  background: status === 'success' ? 'oklch(0.6 0.18 150)' : 'var(--primary)',
+                  background: status === 'success' ? 'oklch(0.6 0.18 150)' : 'linear-gradient(135deg, hsl(199 89% 60%), hsl(212 92% 52%))',
                   color: 'var(--primary-foreground)',
-                  boxShadow: '0 0 20px var(--hero-glow)',
+                  boxShadow: '0 0 22px hsl(199 89% 60% / 0.28)',
                 }}
               >
                 {status === 'idle' && (
@@ -214,6 +233,12 @@ export default function Contact() {
                   <>
                     <CheckCircle2 size={16} />
                     Mensagem enviada!
+                  </>
+                )}
+                {status === 'error' && (
+                  <>
+                    <AlertCircle size={16} />
+                    Tente novamente
                   </>
                 )}
               </button>

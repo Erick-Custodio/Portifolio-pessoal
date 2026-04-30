@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -8,9 +8,6 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Branding */}
         <div className="text-center md:text-left">
-          <span className="font-mono text-primary font-semibold text-base">
-            ec<span className="text-foreground/40">.</span>dev
-          </span>
           <p className="text-xs text-muted-foreground mt-1">
             Erick Custódio &mdash; Desenvolvedor FullStack em formação
           </p>
@@ -54,10 +51,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom line */}
-      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-border/50 flex items-center justify-center gap-1 text-xs text-muted-foreground/50">
-        <span>&copy; {year} Erick Custódio. Feito com</span>
-        <Heart size={11} className="text-primary fill-primary mx-0.5" />
-        <span>e muito JavaScript.</span>
+      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-border/50 text-center text-xs text-muted-foreground/50">
+        &copy; {year} Erick Custódio. Diretos Reservados
       </div>
     </footer>
   )

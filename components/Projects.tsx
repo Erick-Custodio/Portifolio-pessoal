@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import { ExternalLink, Github, Globe } from 'lucide-react'
 
 const projects = [
@@ -12,7 +13,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/-Portf-lio-pessoal-Curr-culo-Online-.',
     live: 'https://www.setebarbeariaprotesecapilar.com/',
     featured: true,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.setebarbeariaprotesecapilar.com%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: 'https://www.setebarbeariaprotesecapilar.com/img/capa%20inicial.jpeg',
   },
   {
     title: 'Conversor de Moedas',
@@ -121,10 +122,12 @@ export default function Projects() {
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden bg-secondary">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
                     onError={(e) => {
                       const target = e.currentTarget
                       target.onerror = null

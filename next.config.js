@@ -1,9 +1,19 @@
+const repo = 'portifolio-pessoal';
+const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  basePath: isGithubPages ? `/${repo}` : '',
+  assetPrefix: isGithubPages ? `/${repo}/` : '',
   images: {
-    domains: [],
+    unoptimized: true,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'api.microlink.io' },
+      { protocol: 'https', hostname: 'placehold.co' },
+      { protocol: 'https', hostname: 'www.setebarbeariaprotesecapilar.com' },
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
