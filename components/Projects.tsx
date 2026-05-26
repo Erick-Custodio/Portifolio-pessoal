@@ -36,6 +36,16 @@ const projects = [
     image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FDev-Sorteio--Erick%2F&screenshot=true&meta=false&embed=screenshot.url',
   },
   {
+    title: 'Jokempo',
+    description:
+      'Jogo de pedra, papel e tesoura com placar dinâmico, escolhas interativas e feedback visual para cada rodada.',
+    tags: ['JavaScript', 'HTML', 'CSS', 'Jogo'],
+    href: 'https://github.com/Erick-Custodio/Jokempo',
+    live: 'https://erick-custodio.github.io/Jokempo/',
+    featured: false,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FJokempo%2F&screenshot=true&meta=false&embed=screenshot.url',
+  },
+  {
     title: 'Landing Page Starbucks + IA',
     description:
       'Recriação da landing page da Starbucks com agente de IA integrado para anotação de pedidos via chat. Uso de JavaScript e integração com LLM.',
