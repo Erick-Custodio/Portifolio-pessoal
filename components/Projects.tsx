@@ -10,7 +10,7 @@ const projects = [
     description:
       'Site responsivo completo para barbearia, com seções de serviços, equipe, galeria e formulário de contato. Design moderno e mobile-first.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
-    href: 'https://github.com/Erick-Custodio/-Portf-lio-pessoal-Curr-culo-Online-.',
+    href: 'https://github.com/Erick-Custodio/Landing-Pages-Sete-Barbearia',
     live: 'https://www.setebarbeariaprotesecapilar.com/',
     featured: true,
     image: 'https://www.setebarbeariaprotesecapilar.com/img/capa%20inicial.jpeg',
@@ -24,6 +24,25 @@ const projects = [
     live: 'https://erick-custodio.github.io/Conversor-de-Moedas-Erick/',
     featured: true,
     image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FConversor-de-Moedas-Erick%2F&screenshot=true&meta=false&embed=screenshot.url',
+  },
+  {
+    title: 'Landing Page Sonho Doce',
+    description:
+      'Landing page responsiva para confeitaria, destacando produtos, identidade visual da marca e chamadas de contato para clientes.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
+    href: 'https://github.com/Erick-Custodio/landing-pages-sonho-doce',
+    live: 'https://www.sonhodoce.net.br/',
+    featured: true,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.sonhodoce.net.br%2F&screenshot=true&meta=false&embed=screenshot.url',
+  },
+  {
+    title: 'Cadastro de Usuários',
+    description:
+      'Aplicação para cadastro e gerenciamento de usuários, com interface objetiva para criar, listar e organizar registros.',
+    tags: ['JavaScript', 'React', 'Node.js', 'CRUD'],
+    href: 'https://github.com/Erick-Custodio/cadastro-de-usuarios',
+    featured: false,
+    image: '/img/cadastro-clientes-cover.png',
   },
   {
     title: 'Dev Sorteio',
@@ -137,7 +156,9 @@ export default function Projects() {
                     alt={project.title}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                    className={`transition-transform duration-500 group-hover:scale-105 opacity-80 ${
+                      project.title === 'Cadastro de Usuários' ? 'object-contain bg-secondary' : 'object-cover'
+                    }`}
                     onError={(e) => {
                       const target = e.currentTarget
                       target.onerror = null
@@ -173,15 +194,17 @@ export default function Projects() {
                       >
                         <Github size={16} />
                       </a>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Ver projeto ao vivo"
-                        className="p-1.5 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-200"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
+                      {'live' in project && project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Ver projeto ao vivo"
+                          className="p-1.5 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-200"
+                        >
+                          <ExternalLink size={16} />
+                        </a>
+                      )}
                     </div>
                   </div>
 
