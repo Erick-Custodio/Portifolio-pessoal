@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Branding */}
         <div className="text-center md:text-left">
           <p className="text-xs text-muted-foreground mt-1">
-            Erick Custódio &mdash; Desenvolvedor FullStack em formação
+            Erick Custódio &mdash; Desenvolvedor FullStack 
           </p>
         </div>
 

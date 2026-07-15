@@ -142,7 +142,7 @@ export default function Contact() {
                   <span className="text-sm font-semibold text-foreground">Disponível agora</span>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Aberto para estágio e oportunidades de desenvolvedor.
+                  Aberto para estágio , freelance e oportunidades de desenvolvedor.
                   Respondo em até 24 horas.
                 </p>
               </div>
