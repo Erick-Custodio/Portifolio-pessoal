@@ -114,7 +114,7 @@ export default function Hero() {
             Ver Projetos
           </a>
           <a
-            href="https://drive.google.com/file/d/1iBN-bkeeQ14erbgzzqYtdywUIKkyD2OQ/preview"
+            href="https://drive.google.com/file/d/1fSP2MGbIaC704Hom0Q2K2t5ScEn1GDL_/preview"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary font-semibold text-sm transition-all duration-200 hover:bg-primary hover:text-primary-foreground hover:scale-105"

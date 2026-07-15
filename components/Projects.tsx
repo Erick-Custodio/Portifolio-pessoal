@@ -40,7 +40,7 @@ const projects = [
     description:
       'Aplicação para cadastro e gerenciamento de usuários, com interface objetiva para criar, listar e organizar registros.',
     tags: ['JavaScript', 'React', 'Node.js', 'CRUD'],
-    href: 'https://github.com/Erick-Custodio/cadastro-de-usuarios',
+    href: 'https://github.com/Erick-Custodio/Cadastro-de-Usu-rios',
     featured: false,
     image: '/img/cadastro-clientes-cover.png',
   },
@@ -73,6 +73,16 @@ const projects = [
     live: 'https://erick-custodio.github.io/Starbucks-Erick/',
     featured: true,
     image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FStarbucks-Erick%2F&screenshot=true&meta=false&embed=screenshot.url',
+  },
+  {
+    title: 'Fernando Batistella Decorador',
+    description:
+      'Site institucional para designer floral especializado em decoração de casamentos, debutantes e eventos corporativos, com galeria de trabalhos por categoria.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
+    href: 'https://github.com/Erick-Custodio/Fernando-Batistella-Decorador',
+    live: 'https://fernandobatistella.com.br',
+    featured: false,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ffernandobatistella.com.br&screenshot=true&meta=false&embed=screenshot.url',
   },
 ]
 

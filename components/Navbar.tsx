@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* CTAs */}
         <div className="hidden md:flex items-center gap-2">
           <a
-            href="https://drive.google.com/file/d/1iBN-bkeeQ14erbgzzqYtdywUIKkyD2OQ/preview"
+            href="https://drive.google.com/file/d/1fSP2MGbIaC704Hom0Q2K2t5ScEn1GDL_/preview"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-primary/50 text-primary text-sm font-semibold transition-all duration-200 hover:bg-primary/10 hover:border-primary"
@@ -118,7 +118,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href="https://drive.google.com/file/d/1iBN-bkeeQ14erbgzzqYtdywUIKkyD2OQ/preview"
+            href="https://drive.google.com/file/d/1fSP2MGbIaC704Hom0Q2K2t5ScEn1GDL_/preview"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-primary text-primary text-sm font-semibold"
