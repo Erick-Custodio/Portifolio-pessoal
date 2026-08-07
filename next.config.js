@@ -7,6 +7,9 @@ const nextConfig = {
   basePath: isGithubPages ? `/${repo}` : '',
   assetPrefix: isGithubPages ? `/${repo}/` : '',
   allowedDevOrigins: ['localhost', '127.0.0.1', '192.168.0.198'],
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repo}` : '',
+  },
   images: {
     unoptimized: true,
     remotePatterns: [

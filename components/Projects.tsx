@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { ExternalLink, Github, Globe } from 'lucide-react'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const withBasePath = (src: string) => (src.startsWith('/') ? `${basePath}${src}` : src)
+
 const projects = [
   {
     title: 'Landing Page Sete Barbearia',
@@ -162,7 +165,7 @@ export default function Projects() {
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden bg-secondary">
                   <Image
-                    src={project.image}
+                    src={withBasePath(project.image)}
                     alt={project.title}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
