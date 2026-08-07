@@ -16,11 +16,11 @@ const skillCategories = [
   {
     category: 'Backend & Ferramentas',
     skills: [
-      { name: 'Node.js', level: 60 },
-      { name: 'Express.js', level: 58 },
-      { name: 'Git & GitHub', level: 75 },
-      { name: 'REST APIs', level: 65 },
-      { name: 'Lógica de Programação', level: 82 },
+      { name: 'Node.js', level: 90 },
+      { name: 'Express.js', level: 88 },
+      { name: 'Git & GitHub', level: 100 },
+      { name: 'REST APIs', level: 85 },
+      { name: 'Lógica de Programação', level: 92 },
     ],
   },
   {
@@ -37,7 +37,7 @@ const skillCategories = [
 const techStack = [
   'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Next.js',
   'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'SQL', 'NoSQL',
-  'Git', 'GitHub', 'Tailwind', 'Figma', 'VS Code',
+  'Git', 'GitHub', 'Tailwind', 'Figma', 'VS Code','N8N','Vercel',
 ]
 
 function SkillBar({ name, level, animate }: { name: string; level: number; animate: boolean }) {

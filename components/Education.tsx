@@ -10,7 +10,7 @@ const timeline = [
     course: 'Engenharia de Software',
     period: '2025 — 2029',
     status: 'Em andamento',
-    progress: 20,
+    progress: 50,
     description:
       'Bacharelado em Engenharia de Software com foco em fundamentos de computação, algoritmos, estruturas de dados, engenharia de requisitos e desenvolvimento de sistemas.',
     tags: ['Algoritmos', 'POO', 'Engenharia de Req.', 'Banco de Dados'],
@@ -21,7 +21,7 @@ const timeline = [
     course: 'Desenvolvedor FullStack',
     period: '2025 — 2026',
     status: 'Em andamento',
-    progress: 60,
+    progress: 85,
     description:
       'Formação prática intensiva em desenvolvimento web FullStack, com projetos reais desde o início. HTML, CSS, JavaScript, React, Node.js, APIs REST e boas práticas.',
     tags: ['React', 'Node.js', 'APIs REST', 'JavaScript', 'Git'],
@@ -32,7 +32,7 @@ const timeline = [
     course: 'Inglês — Nível Básico',
     period: '2025 — presente',
     status: 'Em desenvolvimento',
-    progress: 30,
+    progress: 50,
     description:
       'Desenvolvimento do idioma inglês com foco em leitura técnica de documentações, comunicação escrita e compreensão de conteúdo em inglês na área de TI.',
     tags: ['Leitura Técnica', 'Documentações', 'Comunicação'],
