@@ -82,7 +82,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Fernando-Batistella-Decorador',
     live: 'https://fernandobatistella.com.br',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ffernandobatistella.com.br&screenshot=true&meta=false&embed=screenshot.url',
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ffernandobatistella.com.br&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
   },
 ]
 

@@ -6,6 +6,7 @@ const nextConfig = {
   output: 'export',
   basePath: isGithubPages ? `/${repo}` : '',
   assetPrefix: isGithubPages ? `/${repo}/` : '',
+  allowedDevOrigins: ['localhost', '127.0.0.1', '192.168.0.198'],
   images: {
     unoptimized: true,
     remotePatterns: [
