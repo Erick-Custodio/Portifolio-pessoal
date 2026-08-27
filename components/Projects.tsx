@@ -36,7 +36,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/landing-pages-sonho-doce',
     live: 'https://www.sonhodoce.net.br/',
     featured: true,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.sonhodoce.net.br%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Fsonhodoce.net.br%2F&screenshot=true&meta=false&embed=screenshot.url',
   },
   {
     title: 'Cadastro de Usuários',
@@ -86,6 +86,46 @@ const projects = [
     live: 'https://fernandobatistella.com.br',
     featured: false,
     image: 'https://api.microlink.io/?url=https%3A%2F%2Ffernandobatistella.com.br&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+  },
+  {
+    title: 'Vitra Suplementos e-commerce',
+    description:
+      'E-commerce online especializado na apresentação e venda de produtos, com catálogo organizado, navegação intuitiva e experiência de compra responsiva. O site permite aos clientes conhecer os produtos, visualizar detalhes e realizar suas compras de forma prática e segura.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
+    href: 'https://github.com/Erick-Custodio/e-ccomerce',
+    live: 'https://erick-custodio.github.io/e-ccomerce/',
+    featured: false,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2Fe-ccomerce%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+  },
+  {
+    title: 'DevClub',
+    description:
+      'Site institucional e portfólio profissional desenvolvido para apresentar serviços, projetos e informações sobre atuação na área de desenvolvimento web. Possui design moderno e responsivo, navegação intuitiva e seções destinadas à apresentação profissional e ao destaque dos principais trabalhos realizados.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
+    href: 'https://github.com/Erick-Custodio/DevClub',
+    live: 'https://erick-custodio.github.io/DevClub/',
+    featured: false,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FDevClub%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+  },
+   {
+    title: 'Landing Page Prime Imovéis Imobiliaria',
+    description:
+      'Landing page imobiliária desenvolvida para apresentar imóveis de forma moderna, atrativa e estratégica. A página destaca propriedades, informações relevantes e diferenciais do empreendimento, com navegação intuitiva, layout responsivo e foco na geração de interesse e conversão de potenciais clientes.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
+    href: 'https://github.com/Erick-Custodio/Imobiliaria',
+    live: 'https://erick-custodio.github.io/Imobiliaria/',
+    featured: false,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FImobiliaria%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+  },
+   {
+    title: 'Landing Page Restaurant',
+    description:
+      'Landing page para restaurante, desenvolvida para apresentar o estabelecimento de forma moderna e atrativa. A página destaca o cardápio, os principais pratos, informações sobre o restaurante e formas de contato, proporcionando uma experiência visual agradável e incentivando clientes a conhecer o local e realizar pedidos ou reservas.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
+    href: 'https://github.com/Erick-Custodio/Restaurante',
+    live: 'https://erick-custodio.github.io/Restaurante/',
+    featured: false,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FRestaurante%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
   },
 ]
 
@@ -137,11 +177,10 @@ export default function Projects() {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                  filter === f
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${filter === f
                     ? 'bg-primary text-primary-foreground'
                     : 'border border-border text-muted-foreground hover:border-primary hover:text-primary'
-                }`}
+                  }`}
               >
                 {f}
               </button>
@@ -153,9 +192,8 @@ export default function Projects() {
             {filtered.map((project, i) => (
               <article
                 key={project.title}
-                className={`group relative rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-2xl ${
-                  project.featured ? 'md:first:col-span-2' : ''
-                }`}
+                className={`group relative rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-2xl ${project.featured ? 'md:first:col-span-2' : ''
+                  }`}
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
                 style={{
@@ -169,9 +207,8 @@ export default function Projects() {
                     alt={project.title}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className={`transition-transform duration-500 group-hover:scale-105 opacity-80 ${
-                      project.title === 'Cadastro de Usuários' ? 'object-contain bg-secondary' : 'object-cover'
-                    }`}
+                    className={`transition-transform duration-500 group-hover:scale-105 opacity-80 ${project.title === 'Cadastro de Usuários' ? 'object-contain bg-secondary' : 'object-cover'
+                      }`}
                     onError={(e) => {
                       const target = e.currentTarget
                       target.onerror = null
