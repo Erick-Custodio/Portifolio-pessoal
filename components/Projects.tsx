@@ -6,6 +6,7 @@ import { ExternalLink, Github, Globe } from 'lucide-react'
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 const withBasePath = (src: string) => (src.startsWith('/') ? `${basePath}${src}` : src)
+const fallbackCover = (title: string) => `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"><rect width="1200" height="675" fill="#111827"/><path d="M0 520 360 260l220 160 210-210 410 310v155H0z" fill="#17313a"/><text x="600" y="570" fill="#e5e7eb" font-family="Arial" font-size="44" text-anchor="middle">${title}</text></svg>`)}`
 
 const projects = [
   {
@@ -14,9 +15,9 @@ const projects = [
       'Site responsivo completo para barbearia, com seções de serviços, equipe, galeria e formulário de contato. Design moderno e mobile-first.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
     href: 'https://github.com/Erick-Custodio/Landing-Pages-Sete-Barbearia',
-    live: 'https://www.setebarbeariaprotesecapilar.com/',
+    live: 'https://erick-custodio.github.io/Landing-Pages-Sete-Barbearia/',
     featured: true,
-    image: 'https://www.setebarbeariaprotesecapilar.com/img/capa%20inicial.jpeg',
+    image: '/img/sete-barbearia-cover.jpg',
   },
   {
     title: 'Conversor de Moedas',
@@ -26,7 +27,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Conversor-de-Moedas-Erick',
     live: 'https://erick-custodio.github.io/Conversor-de-Moedas-Erick/',
     featured: true,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FConversor-de-Moedas-Erick%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: '/img/conversor-moedas-cover.jpg',
   },
   {
     title: 'Landing Page Sonho Doce',
@@ -36,7 +37,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/landing-pages-sonho-doce',
     live: 'https://www.sonhodoce.net.br/',
     featured: true,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fsonhodoce.net.br%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: '/img/sonho-doce-cover.jpg',
   },
   {
     title: 'Cadastro de Usuários',
@@ -55,7 +56,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Dev-Sorteio--Erick',
     live: 'https://erick-custodio.github.io/Dev-Sorteio--Erick/',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FDev-Sorteio--Erick%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: '/img/dev-sorteio-cover.jpg',
   },
   {
     title: 'Jokempo',
@@ -65,7 +66,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Jokempo',
     live: 'https://erick-custodio.github.io/Jokempo/',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FJokempo%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: '/img/jokempo-cover.jpg',
   },
   {
     title: 'Landing Page Starbucks + IA',
@@ -75,7 +76,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Starbucks-Erick',
     live: 'https://erick-custodio.github.io/Starbucks-Erick/',
     featured: true,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FStarbucks-Erick%2F&screenshot=true&meta=false&embed=screenshot.url',
+    image: '/img/starbucks-cover.jpg',
   },
   {
     title: 'Fernando Batistella Decorador',
@@ -95,7 +96,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/e-ccomerce',
     live: 'https://erick-custodio.github.io/e-ccomerce/',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2Fe-ccomerce%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+    image: '/img/vitra-suplementos-cover.jpg',
   },
   {
     title: 'DevClub',
@@ -105,7 +106,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/DevClub',
     live: 'https://erick-custodio.github.io/DevClub/',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FDevClub%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+    image: '/img/devclub-cover.jpg',
   },
    {
     title: 'Landing Page Prime Imovéis Imobiliaria',
@@ -115,7 +116,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Imobiliaria',
     live: 'https://erick-custodio.github.io/Imobiliaria/',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FImobiliaria%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+    image: '/img/prime-imoveis-cover.jpg',
   },
    {
     title: 'Landing Page Restaurant',
@@ -125,7 +126,7 @@ const projects = [
     href: 'https://github.com/Erick-Custodio/Restaurante',
     live: 'https://erick-custodio.github.io/Restaurante/',
     featured: false,
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ferick-custodio.github.io%2FRestaurante%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+    image: '/img/restaurante-cover.jpg',
   },
 ]
 
@@ -212,7 +213,7 @@ export default function Projects() {
                     onError={(e) => {
                       const target = e.currentTarget
                       target.onerror = null
-                      target.src = `https://placehold.co/600x340/1a1a2e/64d9c8?text=${encodeURIComponent(project.title)}`
+                      target.src = fallbackCover(project.title)
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
