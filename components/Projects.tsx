@@ -15,7 +15,7 @@ const projects = [
       'Site responsivo completo para barbearia, com seções de serviços, equipe, galeria e formulário de contato. Design moderno e mobile-first.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsivo'],
     href: 'https://github.com/Erick-Custodio/Landing-Pages-Sete-Barbearia',
-    live: 'https://erick-custodio.github.io/Landing-Pages-Sete-Barbearia/',
+    live: 'https://seteprotesecapilar.com.br',
     featured: true,
     image: '/img/sete-barbearia-cover.jpg',
   },
