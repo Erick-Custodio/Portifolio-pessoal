@@ -10,6 +10,16 @@ const fallbackCover = (title: string) => `data:image/svg+xml,${encodeURIComponen
 
 const projects = [
   {
+    title: 'Sistema de Gestão Social Media',
+    description:
+      'Sistema completo para gestão de presença em redes sociais, desenvolvido para organizar informações, acompanhar indicadores e apoiar a administração de conteúdos e resultados da marca.',
+    tags: ['React', 'Next.js', 'JavaScript', 'Gestão'],
+    href: 'https://github.com/Erick-Custodio/Sistema-de-Gest-o-Social-Media',
+    live: 'https://avelissocialmedia.vercel.app/',
+    featured: true,
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Favelissocialmedia.vercel.app%2F&screenshot=true&meta=false&embed=screenshot.url&waitUntil=networkidle2',
+  },
+  {
     title: 'Landing Page Sete Barbearia',
     description:
       'Site responsivo completo para barbearia, com seções de serviços, equipe, galeria e formulário de contato. Design moderno e mobile-first.',
